@@ -18,15 +18,15 @@
   line-height: 10px;
   letter-spacing: 1.9px;
   color: var(--white-smoke-light);
+  position: relative;
 }
 .nav-list li a:hover,
 .nav-list li a:active,
 .nav-list li a.active {
   color: var(--white);
-  position: relative;
 }
 
-.nav-list li a::after {
+.nav-list li a.active::after {
   content: "";
   display: block;
   width: 100%;

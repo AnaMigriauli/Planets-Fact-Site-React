@@ -1,4 +1,4 @@
-/* .mercury {
+.mercury {
   width: 111px;
   height: 111px;
   margin-top: 95px;
@@ -65,4 +65,13 @@
   letter-spacing: -0.75px;
   color: var(--white);
 }
-
+.blur {
+  filter: blur(2px);
+}
+/* .internal-structure {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: 95px;
+  right: 106px;
+} */

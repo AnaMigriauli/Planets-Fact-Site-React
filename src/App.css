@@ -1,2 +1,14 @@
+@font-face {
+  font-family: "Antonio-Regular";
+  src: url("./assets/fonts/Antonio-Regular.ttf") format("ttf");
+}
 
+@font-face {
+  font-family: "LeagueSpartan-Regular";
+  src: url("./assets/fonts/LeagueSpartan-Regular.ttf") format("ttf");
+}
 
+@font-face {
+  font-family: "LeagueSpartan-Bold";
+  src: url("./assets/fonts/LeagueSpartan-Bold.ttf") format("ttf");
+}
