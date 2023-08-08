@@ -1,5 +1,6 @@
+import MainNavigation from "../components/MainMenu";
 import { Outlet } from "react-router-dom";
-import MainNavigation from "../components/Navigation";
+import classes from "../planets/Planets.module.css";
 
 function Planets() {
   return (

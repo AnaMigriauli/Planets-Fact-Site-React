@@ -1,0 +1,36 @@
+.mercury {
+  width: 111px;
+  height: 111px;
+  margin-top: 95px;
+}
+.mercury-overview {
+  margin-top: 98px;
+  color: var(--white);
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.mercury-overview h4 {
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+}
+.mercury-overview p {
+  font-family: Spartan;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.mercury-parameters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+}
+.mercury-parameters p {
+  color: var(--white-smoke-light);
+}
+
+.mercury-parameters span {
+  color: var(--white);
+}

@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Planets from "./assets/planets/Planets";
-import Mercury from "./assets/planets/Mercury";
+import Planets from "./planets/Planets";
+import Navigation from "./components/Navigation";
+import Mercury from "./planets/Mercury";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -9,8 +10,13 @@ const router = createBrowserRouter([
     element: <Planets />,
     children: [
       {
-        path: "/",
+        index: true,
+        path: "/overview",
         element: <Mercury />,
+      },
+      {
+        path: "/nav:id",
+        element: <Navigation />,
       },
     ],
   },
