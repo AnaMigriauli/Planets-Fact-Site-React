@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import classes from "./MainMenu.module.css";
+import classes from "./MobileNavigation.module.css";
 import arrow from "../assets/images/Path 3.svg";
 import Navigation from "./Navigation";
 
 const MENU = [
-  { id: "01", name: "mercury", color: " --water" },
-  { id: "02", name: "venus", color: " --yellow" },
-  { id: "03", name: "earth", color: " --blue" },
-  { id: "04", name: "mars", color: "--Radical-Red" },
-  { id: "05", name: "jupiter", color: "  --Rusty-Sand" },
-  { id: "06", name: "saturn", color: " --Orange-Yellow" },
-  { id: "07", name: "uranus", color: " --Turquoise" },
-  { id: "08", name: "neptune", color: " --Blueberry" },
+  { id: "/mercury", name: "mercury", color: " --water" },
+  { id: "/venus", name: "venus", color: " --yellow" },
+  { id: "/earth", name: "earth", color: " --blue" },
+  { id: "/mars", name: "mars", color: "--Radical-Red" },
+  { id: "/jupiter", name: "jupiter", color: "  --Rusty-Sand" },
+  { id: "/saturn", name: "saturn", color: " --Orange-Yellow" },
+  { id: "/uranus", name: "uranus", color: " --Turquoise" },
+  { id: "/neptune", name: "neptune", color: " --Blueberry" },
 ];
 
 function MainNavigation() {
@@ -63,7 +63,7 @@ function MainNavigation() {
           ""
         )}
       </header>
-      {!isMenuClicked && <Navigation />}
+      <Navigation />
     </>
   );
 }

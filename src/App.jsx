@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import Planets from "./planets/Root";
-import Navigation from "./navigation/Navigation";
-import Mercury from "./planets/Mercury";
+// import Navigation from "./navigation/Navigation";
+import { Mercury } from "./planets/Mercury";
 import "./App.css";
-import MercuryStructure from "./planets/MercuryStructure";
+import { MercuryStructure } from "./planets/Mercury";
 import RootPage from "./planets/Root";
-import MercurySurface from "./planets/MercurySurface";
+import { MercurySurface } from "./planets/Mercury";
+import { Venus, VenusStructure } from "./planets/Venus";
 
 const router = createBrowserRouter([
   {
@@ -14,21 +14,25 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/overview",
+        path: "overview:id",
         element: <Mercury />,
       },
       {
-        path: "/nav:id",
-        element: <Navigation />,
-      },
-      {
-        path: "/structure",
+        path: "structure:id",
         element: <MercuryStructure />,
       },
 
       {
-        path: "/surface",
+        path: "surface:id",
         element: <MercurySurface />,
+      },
+      {
+        path: "overview:id",
+        element: <Venus />,
+      },
+      {
+        path: "structure",
+        element: <VenusStructure />,
       },
     ],
   },

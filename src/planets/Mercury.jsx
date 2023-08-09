@@ -1,5 +1,7 @@
 import mercury from "../assets/images/mercury-1.svg";
-// import classes from "../planets/Mercury.module.css";
+import mercuryStr from "../assets/images/mercury-2.svg";
+import mercurySurf from "../assets/images/mercury-3.svg";
+import classes from "../planets/Mercury.module.css";
 import Planet from "../common/Planet";
 
 const mercuryParameters = [
@@ -9,9 +11,10 @@ const mercuryParameters = [
   { label: "AVERAGE TEMP", value: "430°C" },
 ];
 
-function Mercury() {
+export function Mercury() {
   return (
     <Planet
+      classname={classes.mercury}
       name="MERCURY"
       imgSrc={mercury}
       overview={
@@ -21,4 +24,34 @@ function Mercury() {
     />
   );
 }
-export default Mercury;
+export function MercuryStructure() {
+  return (
+    <Planet
+      name="MERCURY"
+      imgSrc={mercury}
+      src={mercuryStr}
+      className={classes["internal-structure"]}
+      classname={classes.mercury}
+      overview={
+        "Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density."
+      }
+      mercuryParam={mercuryParameters}
+    />
+  );
+}
+
+export function MercurySurface() {
+  return (
+    <Planet
+      name="MERCURY"
+      imgSrc={mercury}
+      src={mercurySurf}
+      className={classes.suface}
+      classname={classes.mercury}
+      overview={
+        "Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s."
+      }
+      mercuryParam={mercuryParameters}
+    />
+  );
+}
