@@ -5,34 +5,25 @@ import "./App.css";
 import { MercuryStructure } from "./planets/Mercury";
 import RootPage from "./planets/Root";
 import { MercurySurface } from "./planets/Mercury";
-import { Venus, VenusStructure } from "./planets/Venus";
+import { Venus, VenusStructure, VenusSurface } from "./planets/Venus";
+import RootNavigationPage from "./planets/NavigationRoot";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <RootPage />,
     children: [
       {
-        index: true,
-        path: "overview:id",
-        element: <Mercury />,
-      },
-      {
-        path: "structure:id",
-        element: <MercuryStructure />,
-      },
-
-      {
-        path: "surface:id",
-        element: <MercurySurface />,
-      },
-      {
-        path: "overview:id",
-        element: <Venus />,
-      },
-      {
-        path: "structure",
-        element: <VenusStructure />,
+        path: "",
+        element: <RootNavigationPage />,
+        children: [
+          { index: true, path: ":planetId/overview", element: <Mercury /> },
+          { path: ":planetId/structure", element: <MercuryStructure /> },
+          { path: ":planetId/surface", element: <MercurySurface /> },
+          { path: ":planetId/overview", element: <Venus /> },
+          { path: ":planetId/structure", element: <VenusStructure /> },
+          { path: ":planetId/surface", element: <VenusSurface /> },
+        ],
       },
     ],
   },

@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import venus from "../assets/images/venus-1.svg";
 import venusStr from "../assets/images/venus-2.svg";
 import venusSurf from "../assets/images/venus-3.svg";
@@ -11,9 +12,14 @@ const venusParameters = [
   { label: "AVERAGE TEMP", value: "430°C" },
 ];
 
-export function Venus() {
+export function Venus({ menu }) {
+  const selectedPlanet = menu.find((planet) => planet.name === planetId);
+  console.log(menu);
+  const { planetId } = useParams();
+  // if (planetId === "venus") {
   return (
     <Planet
+      menu={menu}
       classname={classes.venus}
       name="VENUS"
       imgSrc={venus}
@@ -23,35 +29,45 @@ export function Venus() {
       mercuryParam={venusParameters}
     />
   );
+  // }
+  // return null;
 }
 export function VenusStructure() {
-  return (
-    <Planet
-      name="VENUS"
-      imgSrc={venus}
-      src={venusStr}
-      className={classes["internal-structure"]}
-      classname={classes.venus}
-      overview={
-        "The similarity in size and density between Venus and Earth suggests they share a similar internal structure: a core, mantle, and crust. Like that of Earth, Venusian core is most likely at least partially liquid because the two planets have been cooling at about the same rate."
-      }
-      mercuryParam={venusParameters}
-    />
-  );
+  const { planetId } = useParams();
+
+  if (planetId === "venus") {
+    return (
+      <Planet
+        name="VENUS"
+        imgSrc={venus}
+        src={venusStr}
+        className={classes["internal-structure"]}
+        classname={classes.venus}
+        overview={
+          "The similarity in size and density between Venus and Earth suggests they share a similar internal structure: a core, mantle, and crust. Like that of Earth, Venusian core is most likely at least partially liquid because the two planets have been cooling at about the same rate."
+        }
+        mercuryParam={venusParameters}
+      />
+    );
+  }
 }
 
 export function VenusSurface() {
-  return (
-    <Planet
-      name="Venus"
-      imgSrc={venus}
-      src={venusSurf}
-      className={classes.suface}
-      classname={classes.venus}
-      overview={
-        "Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii."
-      }
-      mercuryParam={venusParameters}
-    />
-  );
+  const { planetId } = useParams();
+
+  if (planetId === "venus") {
+    return (
+      <Planet
+        name="Venus"
+        imgSrc={venus}
+        src={venusSurf}
+        className={classes.suface}
+        classname={classes.venus}
+        overview={
+          "Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii."
+        }
+        mercuryParam={venusParameters}
+      />
+    );
+  }
 }

@@ -2,20 +2,19 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./MobileNavigation.module.css";
 import arrow from "../assets/images/Path 3.svg";
-import Navigation from "./Navigation";
 
-const MENU = [
-  { id: "/mercury", name: "mercury", color: " --water" },
-  { id: "/venus", name: "venus", color: " --yellow" },
-  { id: "/earth", name: "earth", color: " --blue" },
-  { id: "/mars", name: "mars", color: "--Radical-Red" },
-  { id: "/jupiter", name: "jupiter", color: "  --Rusty-Sand" },
-  { id: "/saturn", name: "saturn", color: " --Orange-Yellow" },
-  { id: "/uranus", name: "uranus", color: " --Turquoise" },
-  { id: "/neptune", name: "neptune", color: " --Blueberry" },
-];
+// const MENU = [
+//   { id: "mercury", name: "mercury", color: " --water" },
+//   { id: "venus", name: "venus", color: " --yellow" },
+//   { id: "earth", name: "earth", color: " --blue" },
+//   { id: "mars", name: "mars", color: "--Radical-Red" },
+//   { id: "jupiter", name: "jupiter", color: "  --Rusty-Sand" },
+//   { id: "saturn", name: "saturn", color: " --Orange-Yellow" },
+//   { id: "uranus", name: "uranus", color: " --Turquoise" },
+//   { id: "neptune", name: "neptune", color: " --Blueberry" },
+// ];
 
-function MainNavigation() {
+function MainNavigation({ menu }) {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const OpenMenuHandler = () => {
     setIsMenuClicked(!isMenuClicked);
@@ -39,7 +38,7 @@ function MainNavigation() {
         {isMenuClicked ? (
           <nav>
             <ul>
-              {MENU.map((planet) => (
+              {menu.map((planet) => (
                 <li key={planet.id} className={classes["menu-list"]}>
                   <div className={classes["list-item"]}>
                     <div
@@ -50,7 +49,10 @@ function MainNavigation() {
                         borderRadius: "50%",
                       }}
                     ></div>
-                    <NavLink to={planet.id} className={classes.planets}>
+                    <NavLink
+                      to={`/${planet.id}/overview`}
+                      className={classes.planets}
+                    >
                       {planet.name}
                     </NavLink>
                   </div>
@@ -63,7 +65,6 @@ function MainNavigation() {
           ""
         )}
       </header>
-      <Navigation />
     </>
   );
 }

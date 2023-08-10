@@ -8,6 +8,7 @@ function Planet({
   src,
   className,
   classname,
+  menu,
 }) {
   // const { name, imgSrc, overview, mercuryParam } = props;
   return (
