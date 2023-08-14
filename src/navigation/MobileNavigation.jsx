@@ -45,7 +45,7 @@ function MainNavigation() {
                       }}
                     ></div>
                     <NavLink
-                      to={`/overview/${planet.id}`}
+                      to={`overview/${planet.id}`}
                       className={classes.planets}
                       onClick={CloseMenuHandler}
                     >

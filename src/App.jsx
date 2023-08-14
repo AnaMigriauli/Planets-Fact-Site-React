@@ -28,14 +28,14 @@ const MENU = [
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Planets-Fact-Site-React",
     element: <RootPage />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <RootNavigationPage />,
         children: [
-          { path: "overview/:PlanetId", element: <PlanetsPath /> },
+          { index: true, path: "overview/:PlanetId", element: <PlanetsPath /> },
           { path: "structure/:PlanetId", element: <PlanetsStrucutePath /> },
           { path: "surface/:PlanetId", element: <PlanetsSurfacePath /> },
         ],

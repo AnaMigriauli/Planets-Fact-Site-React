@@ -9,7 +9,7 @@ function Navigation() {
       <ul className={classes["nav-list"]}>
         <li>
           <NavLink
-            to={`/overview/${PlanetId}`}
+            to={`overview/${PlanetId}`}
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
@@ -20,7 +20,7 @@ function Navigation() {
         </li>
         <li>
           <NavLink
-            to={`/structure/${PlanetId}`}
+            to={`structure/${PlanetId}`}
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
@@ -30,7 +30,7 @@ function Navigation() {
         </li>
         <li>
           <NavLink
-            to={`/surface/${PlanetId}`}
+            to={`surface/${PlanetId}`}
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
