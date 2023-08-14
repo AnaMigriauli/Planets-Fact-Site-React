@@ -1,0 +1,19 @@
+.jupiter {
+  width: 224px;
+  height: 224px;
+  margin-top: 39px;
+}
+.internal-structure {
+  width: 222px;
+  height: 222px;
+  position: absolute;
+  top: 40px;
+  right: 22px;
+}
+
+.surface {
+  position: absolute;
+  width: 65px;
+  height: auto;
+  top: 182px;
+}

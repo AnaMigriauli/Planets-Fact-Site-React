@@ -1,15 +1,16 @@
-.venus {
-  height: 154px;
-  width: 154px;
-  margin-top: 74px;
+.earth {
+  width: 173px;
+  height: 173px;
+  margin-top: 64px;
 }
 .internal-structure {
-  width: 154px;
-  height: 154px;
+  width: 170px;
+  height: 170px;
   position: absolute;
-  top: 74px;
-  right: 74px;
+  top: 66px;
+  right: 59px;
 }
+
 .surface {
   position: absolute;
   width: 50px;

@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import mercury from "../assets/images/mercury-1.svg";
 import mercuryStr from "../assets/images/mercury-2.svg";
 import mercurySurf from "../assets/images/mercury-3.svg";
@@ -13,57 +12,46 @@ const mercuryParameters = [
 ];
 
 export function Mercury() {
-  const { planetId } = useParams();
-  if (planetId === "mercury") {
-    return (
-      <Planet
-        // menu={menu}
-        classname={classes.mercury}
-        name="MERCURY"
-        imgSrc={mercury}
-        overview={
-          "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortestof all the Suns planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth."
-        }
-        mercuryParam={mercuryParameters}
-      />
-    );
-  }
-  return null;
+  return (
+    <Planet
+      classname={classes.mercury}
+      name="MERCURY"
+      imgSrc={mercury}
+      overview={
+        "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortestof all the Suns planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth."
+      }
+      parameters={mercuryParameters}
+    />
+  );
 }
 export function MercuryStructure() {
-  const { planetId } = useParams();
-  if (planetId === "mercury") {
-    return (
-      <Planet
-        name="MERCURY"
-        imgSrc={mercury}
-        src={mercuryStr}
-        className={classes["internal-structure"]}
-        classname={classes.mercury}
-        overview={
-          "Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density."
-        }
-        mercuryParam={mercuryParameters}
-      />
-    );
-  }
+  return (
+    <Planet
+      name="MERCURY"
+      imgSrc={mercury}
+      src={mercuryStr}
+      className={classes["internal-structure"]}
+      classname={classes.mercury}
+      overview={
+        "Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density."
+      }
+      parameters={mercuryParameters}
+    />
+  );
 }
 
 export function MercurySurface() {
-  const { planetId } = useParams();
-  if (planetId === "mercury") {
-    return (
-      <Planet
-        name="MERCURY"
-        imgSrc={mercury}
-        src={mercurySurf}
-        className={classes.suface}
-        classname={classes.mercury}
-        overview={
-          "Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s."
-        }
-        mercuryParam={mercuryParameters}
-      />
-    );
-  }
+  return (
+    <Planet
+      name="MERCURY"
+      imgSrc={mercury}
+      src={mercurySurf}
+      className={classes.surface}
+      classname={classes.mercury}
+      overview={
+        "Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s."
+      }
+      parameters={mercuryParameters}
+    />
+  );
 }

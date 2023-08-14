@@ -1,25 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import PlanetContext from "../planetContext/PlanetContext";
 import { NavLink } from "react-router-dom";
 import classes from "./MobileNavigation.module.css";
 import arrow from "../assets/images/Path 3.svg";
 
-// const MENU = [
-//   { id: "mercury", name: "mercury", color: " --water" },
-//   { id: "venus", name: "venus", color: " --yellow" },
-//   { id: "earth", name: "earth", color: " --blue" },
-//   { id: "mars", name: "mars", color: "--Radical-Red" },
-//   { id: "jupiter", name: "jupiter", color: "  --Rusty-Sand" },
-//   { id: "saturn", name: "saturn", color: " --Orange-Yellow" },
-//   { id: "uranus", name: "uranus", color: " --Turquoise" },
-//   { id: "neptune", name: "neptune", color: " --Blueberry" },
-// ];
+function MainNavigation() {
+  const menu = useContext(PlanetContext);
 
-function MainNavigation({ menu }) {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const OpenMenuHandler = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
+  const CloseMenuHandler = () => {
+    setIsMenuClicked(false);
+  };
   return (
     <>
       <header>
@@ -50,8 +45,9 @@ function MainNavigation({ menu }) {
                       }}
                     ></div>
                     <NavLink
-                      to={`/${planet.id}/overview`}
+                      to={`/overview/${planet.id}`}
                       className={classes.planets}
+                      onClick={CloseMenuHandler}
                     >
                       {planet.name}
                     </NavLink>

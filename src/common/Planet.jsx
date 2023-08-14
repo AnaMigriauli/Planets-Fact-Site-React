@@ -4,11 +4,10 @@ function Planet({
   name,
   imgSrc,
   overview,
-  mercuryParam,
+  parameters,
   src,
   className,
   classname,
-  menu,
 }) {
   // const { name, imgSrc, overview, mercuryParam } = props;
   return (
@@ -21,7 +20,7 @@ function Planet({
         <span>Source : Wikipedia</span>
       </div>
       <div className={classes["mercury-parameters"]}>
-        {mercuryParam.map((param) => (
+        {parameters.map((param) => (
           <div key={param.label}>
             <p>{param.label}</p>
             <span>{param.value}</span>

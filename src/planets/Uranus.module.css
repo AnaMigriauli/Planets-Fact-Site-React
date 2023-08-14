@@ -1,0 +1,19 @@
+.uranus {
+  width: 176px;
+  height: 176px;
+  margin-top: 63px;
+}
+.internal-structure {
+  width: 176px;
+  height: 176px;
+  position: absolute;
+  top: 68px;
+  right: 69px;
+}
+
+.surface {
+  position: absolute;
+  width: 65px;
+  height: auto;
+  top: 182px;
+}

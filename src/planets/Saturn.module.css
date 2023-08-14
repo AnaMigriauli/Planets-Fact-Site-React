@@ -1,0 +1,19 @@
+.saturn {
+  width: 256px;
+  height: 256px;
+  margin-top: 24px;
+}
+.internal-structure {
+  width: 155px;
+  height: 155px;
+  position: absolute;
+  top: 68px;
+  right: 69px;
+}
+
+.surface {
+  position: absolute;
+  width: 65px;
+  height: auto;
+  top: 176px;
+}

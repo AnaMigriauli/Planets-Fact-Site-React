@@ -1,0 +1,19 @@
+.neptune {
+  width: 173px;
+  height: 173px;
+  margin-top: 64px;
+}
+.internal-structure {
+  width: 171px;
+  height: 171px;
+  position: absolute;
+  top: 65px;
+  right: 61px;
+}
+
+.surface {
+  position: absolute;
+  width: 65px;
+  height: auto;
+  top: 182px;
+}

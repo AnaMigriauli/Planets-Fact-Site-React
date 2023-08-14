@@ -2,13 +2,14 @@ import { NavLink, useParams } from "react-router-dom";
 import classes from "./Navigation.module.css";
 
 function Navigation() {
-  const { planetId } = useParams();
+  const { PlanetId } = useParams();
+  console.log(PlanetId);
   return (
     <div className={classes.navigation}>
       <ul className={classes["nav-list"]}>
         <li>
           <NavLink
-            to={`/${planetId}/overview`}
+            to={`/overview/${PlanetId}`}
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
@@ -19,7 +20,7 @@ function Navigation() {
         </li>
         <li>
           <NavLink
-            to={`/${planetId}/structure`}
+            to={`/structure/${PlanetId}`}
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
@@ -29,7 +30,7 @@ function Navigation() {
         </li>
         <li>
           <NavLink
-            to={`/${planetId}/surface`}
+            to={`/surface/${PlanetId}`}
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
