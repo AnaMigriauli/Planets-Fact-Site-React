@@ -2,7 +2,7 @@ import uranus from "../assets/images/Uranus-1.svg";
 import uranusStr from "../assets/images/Uranus-2.svg";
 import uranusSurf from "../assets/images/Uranus-3.svg";
 import classes from "../planets/Uranus.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
 
 const uranusParameters = [
   { label: "ROTATION TIME", value: "17.2 HOURS" },

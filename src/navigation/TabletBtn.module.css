@@ -1,0 +1,14 @@
+.btn {
+  width: 281px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var("--white-smoke");
+  color: var("--white");
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

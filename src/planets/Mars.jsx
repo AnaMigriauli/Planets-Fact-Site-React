@@ -2,7 +2,8 @@ import mars from "../assets/images/mars-1.svg";
 import marsStr from "../assets/images/mars-2.svg";
 import marsSurf from "../assets/images/mars-3.svg";
 import classes from "../planets/mars.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
+// import TabletNav from "../navigation/TabletNav";
 
 const marsParameters = [
   { label: "ROTATION TIME", value: "1.03  DAYS" },
@@ -13,15 +14,17 @@ const marsParameters = [
 
 export function Mars() {
   return (
-    <Planet
-      classname={classes.mars}
-      name="MARS"
-      imgSrc={mars}
-      overview={
-        "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the Red Planet "
-      }
-      parameters={marsParameters}
-    />
+    <>
+      <Planet
+        classname={classes.mars}
+        name="MARS"
+        imgSrc={mars}
+        overview={
+          "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the Red Planet "
+        }
+        parameters={marsParameters}
+      />
+    </>
   );
 }
 export function MarsStructure() {

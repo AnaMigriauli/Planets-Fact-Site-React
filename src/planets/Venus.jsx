@@ -2,7 +2,7 @@ import venus from "../assets/images/venus-1.svg";
 import venusStr from "../assets/images/venus-2.svg";
 import venusSurf from "../assets/images/venus-3.svg";
 import classes from "../planets/Venus.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
 
 const venusParameters = [
   { label: "ROTATION TIME", value: "243 DAYS" },

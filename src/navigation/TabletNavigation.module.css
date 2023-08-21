@@ -1,0 +1,28 @@
+.tablet-header {
+  background: var(--dark-blue);
+  width: 100%;
+  border-bottom: 1px solid var(--white-smoke);
+}
+.title {
+  font-family: "Antonio", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -1.05px;
+  text-align: center;
+  margin-top: 32px;
+}
+.tablet-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 39px 53px 27px 51px;
+}
+.planets {
+  text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: var(--white);
+  text-transform: uppercase;
+}

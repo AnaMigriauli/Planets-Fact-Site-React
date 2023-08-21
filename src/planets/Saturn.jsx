@@ -2,7 +2,7 @@ import saturn from "../assets/images/saturn-1.svg";
 import saturnStr from "../assets/images/saturn-2.svg";
 import saturnSurf from "../assets/images/saturn-3.svg";
 import classes from "../planets/Saturn.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
 
 const saturnParameters = [
   { label: "ROTATION TIME", value: "10.8 HOURS" },

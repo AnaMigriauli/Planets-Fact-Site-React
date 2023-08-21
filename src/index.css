@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* background: var(--dark-blue); */
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -29,4 +30,14 @@
   --Orange-Yellow: #fccb6b;
   --Turquoise: #65f0d5;
   --Blueberry: #497efa;
+
+  /* BORDER COLORS */
+
+  --venus-border: #eda249;
+  --earth-border: #6d2ed5;
+  --mars-border: #d14c32;
+  --jupiter-border: #d83a34;
+  --saturn-border: #cd5120;
+  --uranus-border: #1ec1a2;
+  --neptune-border: #2d68f0;
 }

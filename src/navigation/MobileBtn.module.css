@@ -1,0 +1,25 @@
+.navigation {
+  width: 100%;
+  background: var(--dark-blue);
+  border-bottom: 1px solid var(--white-smoke);
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 10px;
+  letter-spacing: 1.9px;
+  color: var(--white-smoke-light);
+  position: relative;
+  padding: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

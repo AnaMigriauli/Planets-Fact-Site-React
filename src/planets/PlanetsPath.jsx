@@ -13,7 +13,6 @@ import { Neptune, NeptuneStructure, NeptuneSurface } from "./Neptune";
 export function PlanetsPath() {
   const { PlanetId } = useParams();
   const menu = useContext(PlanetContext);
-
   const planet = menu.find((planet) => planet.id === PlanetId);
 
   if (planet.id === "mercury") {

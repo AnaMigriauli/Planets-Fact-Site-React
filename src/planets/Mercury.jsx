@@ -2,7 +2,7 @@ import mercury from "../assets/images/mercury-1.svg";
 import mercuryStr from "../assets/images/mercury-2.svg";
 import mercurySurf from "../assets/images/mercury-3.svg";
 import classes from "../planets/Mercury.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
 
 const mercuryParameters = [
   { label: "ROTATION TIME", value: "58.6 DAYS" },

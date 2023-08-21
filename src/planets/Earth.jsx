@@ -2,7 +2,7 @@ import earth from "../assets/images/earth-1.svg";
 import earthStr from "../assets/images/earth-2.svg";
 import earthSurf from "../assets/images/earth-3.svg";
 import classes from "../planets/Earth.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
 
 const earthParameters = [
   { label: "ROTATION TIME", value: "0.99 DAYS" },

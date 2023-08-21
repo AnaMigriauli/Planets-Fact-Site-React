@@ -2,7 +2,7 @@ import neptune from "../assets/images/Neptune-1.svg";
 import neptuneStr from "../assets/images/Neptune-2.svg";
 import neptuneSurf from "../assets/images/Neptune-3.svg";
 import classes from "../planets/Neptune.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
 
 const neptuneParameters = [
   { label: "ROTATION TIME", value: "16.08 HOURS" },

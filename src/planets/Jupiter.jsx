@@ -2,7 +2,7 @@ import jupiter from "../assets/images/jupiter-1.svg";
 import jupiterStr from "../assets/images/jupiter-2.svg";
 import jupiterSurf from "../assets/images/jupiter-3.svg";
 import classes from "../planets/Jupiter.module.css";
-import Planet from "../common/Planet";
+import Planet from "../reusable/Planet";
 
 const jupiterParameters = [
   { label: "ROTATION TIME", value: "9.93 HOURS" },

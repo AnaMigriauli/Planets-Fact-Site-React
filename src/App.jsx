@@ -1,29 +1,43 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PlanetContext from "./planetContext/PlanetContext";
-// import { Mercury } from "./planets/Mercury";
 import "./App.css";
-// import { MercuryStructure } from "./planets/Mercury";
 import RootPage from "./planets/Root";
-// import { MercurySurface } from "./planets/Mercury";
-// import { Venus } from "./planets/Venus";
-// import { VenusStructure } from "./planets/Venus";
-// import { VenusSurface } from "./planets/Venus";
-import RootNavigationPage from "./planets/NavigationRoot";
+import PlanetContext from "./planetContext/PlanetContext";
 import {
   PlanetsPath,
-  PlanetsStrucutePath,
-  PlanetsSurfacePath,
+  // PlanetsStrucutePath,
+  // PlanetsSurfacePath,
 } from "./planets/PlanetsPath";
-
+import { NavigationProvider } from "./planetContext/NavigationContext";
+import Anuki from "./planets/anuki";
 const MENU = [
-  { id: "mercury", name: "mercury", color: " --water" },
-  { id: "venus", name: "venus", color: " --yellow" },
-  { id: "earth", name: "earth", color: " --blue" },
-  { id: "mars", name: "mars", color: "--Radical-Red" },
-  { id: "jupiter", name: "jupiter", color: "  --Rusty-Sand" },
-  { id: "saturn", name: "saturn", color: " --Orange-Yellow" },
-  { id: "uranus", name: "uranus", color: " --Turquoise" },
-  { id: "neptune", name: "neptune", color: " --Blueberry" },
+  { id: "mercury", name: "mercury", color: " --water", border: "--blue-moon" },
+  { id: "venus", name: "venus", color: " --yellow", border: "--venus-border" },
+  { id: "earth", name: "earth", color: " --blue", border: "--earth-border" },
+  { id: "mars", name: "mars", color: "--Radical-Red", border: "--mars-border" },
+  {
+    id: "jupiter",
+    name: "jupiter",
+    color: "  --Rusty-Sand",
+    border: "--jupiter-border",
+  },
+  {
+    id: "saturn",
+    name: "saturn",
+    color: " --Orange-Yellow",
+    border: "--saturn-border",
+  },
+  {
+    id: "uranus",
+    name: "uranus",
+    color: " --Turquoise",
+    border: " --uranus-border",
+  },
+  {
+    id: "neptune",
+    name: "neptune",
+    color: " --Blueberry",
+    border: "--neptune-border",
+  },
 ];
 
 const router = createBrowserRouter([
@@ -31,22 +45,17 @@ const router = createBrowserRouter([
     path: "/Planets-Fact-Site-React",
     element: <RootPage />,
     children: [
-      {
-        path: "",
-        element: <RootNavigationPage />,
-        children: [
-          { index: true, path: "overview/:PlanetId", element: <PlanetsPath /> },
-          { path: "structure/:PlanetId", element: <PlanetsStrucutePath /> },
-          { path: "surface/:PlanetId", element: <PlanetsSurfacePath /> },
-        ],
-      },
+      // { path: ":PlanetId", element: <PlanetsPath /> },
+      { path: ":PlanetId", element: <Anuki /> },
     ],
   },
 ]);
 function App() {
   return (
     <PlanetContext.Provider value={MENU}>
-      <RouterProvider router={router} />;
+      <NavigationProvider>
+        <RouterProvider router={router} />;
+      </NavigationProvider>
     </PlanetContext.Provider>
   );
 }
