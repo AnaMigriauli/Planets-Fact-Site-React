@@ -3,58 +3,47 @@ import marsStr from "../assets/images/mars-2.svg";
 import marsSurf from "../assets/images/mars-3.svg";
 import classes from "../planets/mars.module.css";
 import Planet from "../reusable/Planet";
-// import TabletNav from "../navigation/TabletNav";
-
-const marsParameters = [
-  { label: "ROTATION TIME", value: "1.03  DAYS" },
-  { label: "REVOLUTION TIME", value: "1.88 YEARS" },
-  { label: "RADIUS", value: "3,389.5  KM" },
-  { label: "AVERAGE TEMP", value: "−28°C" },
-];
+import { useParams } from "react-router-dom";
+import PlanetContext from "../planetContext/PlanetContext";
+import { useContext } from "react";
+import { NavigationContext } from "../planetContext/NavigationContext";
 
 export function Mars() {
+  const { PlanetId } = useParams();
+  const menu = useContext(PlanetContext);
+  const planet = menu.find((planet) => planet.id === PlanetId);
+  const { active } = useContext(NavigationContext);
+  let classname, className, src, overview, wikipedia;
+  if (active === "overview") {
+    classname = classes.mars;
+    overview = planet.content;
+    wikipedia = planet.source;
+  } else if (active === "structure") {
+    src = marsStr;
+    className = classes["internal-structure"];
+    classname = classes.mars;
+    overview = planet.contentStructure;
+    wikipedia = planet.sourceStructure;
+  } else if (active === "surface") {
+    src = marsSurf;
+    className = classes.surface;
+    classname = classes.mars;
+    overview = planet.contentSurface;
+    wikipedia = planet.sourceSurface;
+  }
+
   return (
     <>
       <Planet
-        classname={classes.mars}
+        classname={classname}
+        className={className}
         name="MARS"
         imgSrc={mars}
-        overview={
-          "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the Red Planet "
-        }
-        parameters={marsParameters}
+        overview={overview}
+        parameters={planet.marsParameters}
+        src={src}
+        wikipedia={wikipedia}
       />
     </>
-  );
-}
-export function MarsStructure() {
-  return (
-    <Planet
-      name="MARS"
-      imgSrc={mars}
-      src={marsStr}
-      className={classes["internal-structure"]}
-      classname={classes.mars}
-      overview={
-        "Like Earth, Mars has differentiated into a dense metallic core overlaid by less dense materials. Scientists initially determined that the core is at least partially liquid. Current models of its interior imply a core consisting primarily of iron and nickel with about 16–17% sulfur."
-      }
-      parameters={marsParameters}
-    />
-  );
-}
-
-export function MarsSurface() {
-  return (
-    <Planet
-      name="MARS"
-      imgSrc={mars}
-      src={marsSurf}
-      className={classes.surface}
-      classname={classes.mars}
-      overview={
-        "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt."
-      }
-      parameters={marsParameters}
-    />
   );
 }

@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 69px;
+  margin-top: 130px;
 }
 .mercury-overview h4 {
   font-family: "Antonio", sans-serif;
@@ -39,13 +40,22 @@
   text-align: center;
 }
 
-.mercury-overview span {
+.wikipedia {
   font-family: "League Spartan", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 0px;
   color: var(--white-smoke);
+}
+.wikipedia a {
+  font-family: "League Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 25px;
+  text-decoration-line: underline;
+  color: var(--white-smoke);
+  margin: 0 4px;
 }
 .mercury-parameters {
   display: flex;
@@ -81,4 +91,46 @@
 }
 .blur {
   filter: blur(2px);
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 0 40px 36px 39px;
+  }
+  .mercury-overview {
+    margin-top: 0;
+  }
+  .mercury-overview h4 {
+    font-size: 48px;
+  }
+  .mercury-parameters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .mercury-parameters div {
+    flex-direction: column;
+    align-items: start;
+    width: 21.35%;
+  }
+  .mercury-parameters span {
+    margin-top: 6px;
+    font-size: 24px;
+  }
+  .mercury-overview {
+    margin-top: 98px;
+    color: var(--white);
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  .mercury-overview {
+    text-align: start;
+  }
+  .mercury-overview h4 {
+    text-align: start;
+  }
+  .mercury-overview p {
+    text-align: start;
+  }
 }

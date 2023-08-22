@@ -3,55 +3,44 @@ import saturnStr from "../assets/images/saturn-2.svg";
 import saturnSurf from "../assets/images/saturn-3.svg";
 import classes from "../planets/Saturn.module.css";
 import Planet from "../reusable/Planet";
-
-const saturnParameters = [
-  { label: "ROTATION TIME", value: "10.8 HOURS" },
-  { label: "REVOLUTION TIME", value: "29.46 YEARS" },
-  { label: "RADIUS", value: "58,232   KM" },
-  { label: "AVERAGE TEMP", value: "-138°C" },
-];
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import PlanetContext from "../planetContext/PlanetContext";
+import { NavigationContext } from "../planetContext/NavigationContext";
 
 export function Saturn() {
+  const { PlanetId } = useParams();
+  const menu = useContext(PlanetContext);
+  const planet = menu.find((planet) => planet.id === PlanetId);
+  const { active } = useContext(NavigationContext);
+  let classname, className, src, overview, wikipedia;
+  if (active === "overview") {
+    classname = classes.saturn;
+    overview = planet.content;
+    wikipedia = planet.source;
+  } else if (active === "structure") {
+    src = saturnStr;
+    className = classes["internal-structure"];
+    classname = classes.saturn;
+    overview = planet.contentStructure;
+    wikipedia = planet.sourceStructure;
+  } else if (active === "surface") {
+    src = saturnSurf;
+    className = classes.surface;
+    classname = classes.saturn;
+    overview = planet.contentSurface;
+    wikipedia = planet.sourceSurface;
+  }
   return (
     <Planet
-      classname={classes.saturn}
+      classname={classname}
+      className={className}
       name="SATURN"
+      src={src}
       imgSrc={saturn}
-      overview={
-        "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth. "
-      }
-      parameters={saturnParameters}
-    />
-  );
-}
-export function SaturnStructure() {
-  return (
-    <Planet
-      name="SATURN"
-      imgSrc={saturn}
-      src={saturnStr}
-      className={classes["internal-structure"]}
-      classname={classes.saturn}
-      overview={
-        "Despite consisting mostly of hydrogen and helium, most of Saturn's mass is not in the gas phase, because hydrogen becomes a non-ideal liquid when the density is above 0.01 g/cm3, which is reached at a radius containing 99.9% of Saturn's mass."
-      }
-      parameters={saturnParameters}
-    />
-  );
-}
-
-export function SaturnSurface() {
-  return (
-    <Planet
-      name="SATURN"
-      imgSrc={saturn}
-      src={saturnSurf}
-      className={classes.surface}
-      classname={classes.saturn}
-      overview={
-        "The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust. "
-      }
-      parameters={saturnParameters}
+      overview={overview}
+      wikipedia={wikipedia}
+      parameters={planet.saturnParameters}
     />
   );
 }

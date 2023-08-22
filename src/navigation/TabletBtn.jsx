@@ -15,9 +15,9 @@ function MobileBtn() {
       background={planet.border}
       btn={classes.btn}
       list={classes.list}
-      overview="OVERVIEW"
-      structure="INTERNAL STRUCTURE"
-      surface="SURFACE GEOLOGY"
+      overview=" 01 OVERVIEW"
+      structure=" 02 INTERNAL STRUCTURE"
+      surface="03 SURFACE GEOLOGY"
     />
   );
 }

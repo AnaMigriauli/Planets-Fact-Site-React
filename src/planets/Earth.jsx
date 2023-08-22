@@ -3,55 +3,46 @@ import earthStr from "../assets/images/earth-2.svg";
 import earthSurf from "../assets/images/earth-3.svg";
 import classes from "../planets/Earth.module.css";
 import Planet from "../reusable/Planet";
-
-const earthParameters = [
-  { label: "ROTATION TIME", value: "0.99 DAYS" },
-  { label: "REVOLUTION TIME", value: "365.26 DAYS" },
-  { label: "RADIUS", value: "6,371  KM" },
-  { label: "AVERAGE TEMP", value: "16°C" },
-];
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import PlanetContext from "../planetContext/PlanetContext";
+import { NavigationContext } from "../planetContext/NavigationContext";
 
 export function Earth() {
-  return (
-    <Planet
-      classname={classes.earth}
-      name="EARTH"
-      imgSrc={earth}
-      overview={
-        "Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive."
-      }
-      parameters={earthParameters}
-    />
-  );
-}
-export function EarthStructure() {
-  return (
-    <Planet
-      name="EARTH"
-      imgSrc={earth}
-      src={earthStr}
-      className={classes["internal-structure"]}
-      classname={classes.earth}
-      overview={
-        "Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle."
-      }
-      parameters={earthParameters}
-    />
-  );
-}
+  const { PlanetId } = useParams();
+  const menu = useContext(PlanetContext);
+  const planet = menu.find((planet) => planet.id === PlanetId);
+  const { active } = useContext(NavigationContext);
 
-export function EarthSurface() {
+  let classname, className, src, overview, wikipedia;
+  if (active === "overview") {
+    classname = classes.earth;
+    overview = planet.content;
+    wikipedia = planet.source;
+  } else if (active === "structure") {
+    src = earthStr;
+    className = classes["internal-structure"];
+    classname = classes.earth;
+    overview = planet.contentStructure;
+    wikipedia = planet.sourceStructure;
+  } else if (active === "surface") {
+    src = earthSurf;
+    className = classes.surface;
+    classname = classes.earth;
+    overview = planet.contentSurface;
+    wikipedia = planet.sourceSurface;
+  }
+
   return (
     <Planet
+      classname={classname}
       name="EARTH"
+      overview={overview}
       imgSrc={earth}
-      src={earthSurf}
-      className={classes.surface}
-      classname={classes.earth}
-      overview={
-        "The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors."
-      }
-      parameters={earthParameters}
+      src={src}
+      className={className}
+      wikipedia={wikipedia}
+      parameters={planet.earthParameters}
     />
   );
 }

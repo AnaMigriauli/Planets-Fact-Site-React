@@ -3,12 +3,16 @@
   height: 40px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid var("--white-smoke");
-  color: var("--white");
+  border: 1px solid var("--white-smoke") !important;
+  color: var("--white") !important;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
 }
 
 .list {
   display: flex;
   flex-direction: column;
+  font-family: "League Spartan", sans-serif;
   gap: 20px;
 }

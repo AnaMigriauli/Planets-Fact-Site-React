@@ -17,3 +17,14 @@
   height: auto;
   top: 196px;
 }
+@media (min-width: 768px) {
+  .mars {
+    width: 213px;
+    height: 213px;
+    margin-top: 132px;
+  }
+  .internal-structure {
+    width: 213px;
+    height: 213px;
+  }
+}

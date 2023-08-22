@@ -1,12 +1,4 @@
 main {
-  /* width: 375px; */
   background: var(--dark-blue);
   width: 100%;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-
-  /* padding: 0 24px 47px 24px; */
-  /* z-index: 0;
-  position: relative; */
 }

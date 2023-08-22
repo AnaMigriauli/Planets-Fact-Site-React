@@ -16,3 +16,14 @@
   height: auto;
   top: 184px;
 }
+@media (min-width: 768px) {
+  .venus {
+    height: 253px;
+    width: 253px;
+    margin-top: 112px;
+  }
+  .internal-structure {
+    width: 253px;
+    height: 253px;
+  }
+}

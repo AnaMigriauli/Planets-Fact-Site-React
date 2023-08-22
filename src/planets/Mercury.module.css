@@ -17,3 +17,14 @@
   height: auto;
   top: 184px;
 }
+@media (min-width: 768px) {
+  .mercury {
+    width: 184px;
+    height: 184px;
+    margin-top: 146px;
+  }
+  .internal-structure {
+    width: 182px;
+    height: 182px;
+  }
+}

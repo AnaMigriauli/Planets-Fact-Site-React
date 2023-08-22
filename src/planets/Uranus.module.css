@@ -17,3 +17,14 @@
   height: auto;
   top: 182px;
 }
+@media (min-width: 768px) {
+  .uranus {
+    width: 290px;
+    height: 290px;
+    margin-top: 93px;
+  }
+  .internal-structure {
+    width: 290px;
+    height: 290px;
+  }
+}

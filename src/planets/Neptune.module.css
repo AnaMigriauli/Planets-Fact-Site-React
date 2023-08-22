@@ -17,3 +17,14 @@
   height: auto;
   top: 182px;
 }
+@media (min-width: 768px) {
+  .neptune {
+    width: 285px;
+    height: 285px;
+    margin-top: 96px;
+  }
+  .internal-structure {
+    width: 285px;
+    height: 285px;
+  }
+}

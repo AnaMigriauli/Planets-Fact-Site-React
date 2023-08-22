@@ -17,3 +17,14 @@
   height: auto;
   top: 176px;
 }
+@media (min-width: 768px) {
+  .saturn {
+    width: 422px;
+    height: 422px;
+    margin-top: 27px;
+  }
+  .internal-structure {
+    width: 422px;
+    height: 422px;
+  }
+}
