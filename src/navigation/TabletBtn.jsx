@@ -2,7 +2,7 @@ import classes from "./TabletBtn.module.css";
 import Navigation from "../reusable/Navigation";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import PlanetContext from "../planetContext/PlanetContext";
+import PlanetContext from "../context/PlanetDataContext";
 
 function MobileBtn() {
   const { PlanetId } = useParams();
@@ -15,9 +15,13 @@ function MobileBtn() {
       background={planet.border}
       btn={classes.btn}
       list={classes.list}
-      overview=" 01 OVERVIEW"
-      structure=" 02 INTERNAL STRUCTURE"
-      surface="03 SURFACE GEOLOGY"
+      overview=" OVERVIEW"
+      structure=" INTERNAL STRUCTURE"
+      surface=" SURFACE GEOLOGY"
+      numberOne="01"
+      numberTwo="02"
+      numberthree="03"
+      number={classes.number}
     />
   );
 }

@@ -1,7 +1,7 @@
 .venus {
   height: 154px;
   width: 154px;
-  margin-top: 74px;
+  margin: 74px 0 76px 0;
 }
 .internal-structure {
   width: 154px;
@@ -20,7 +20,7 @@
   .venus {
     height: 253px;
     width: 253px;
-    margin-top: 112px;
+    margin: 112px 0 95px 0;
   }
   .internal-structure {
     width: 253px;

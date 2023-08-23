@@ -1,7 +1,8 @@
 .earth {
   width: 173px;
   height: 173px;
-  margin-top: 64px;
+
+  margin: 64px 0 67px 0;
 }
 .internal-structure {
   width: 170px;
@@ -16,4 +17,25 @@
   width: 50px;
   height: auto;
   top: 184px;
+}
+@media (min-width: 768px) {
+  .earth {
+    width: 285px;
+    height: 285px;
+    margin: 96px 0 79px 0;
+  }
+  .internal-structure {
+    width: 285px;
+    height: 285px;
+  }
+}
+@media (min-width: 1440px) {
+  .earth {
+    width: 450px;
+    height: 450px;
+  }
+  .internal-structure {
+    width: 450px;
+    height: 450px;
+  }
 }

@@ -5,8 +5,8 @@ import classes from "../planets/Earth.module.css";
 import Planet from "../reusable/Planet";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import PlanetContext from "../planetContext/PlanetContext";
-import { NavigationContext } from "../planetContext/NavigationContext";
+import PlanetContext from "../context/PlanetDataContext";
+import { NavigationContext } from "../context/NavigationContext";
 
 export function Earth() {
   const { PlanetId } = useParams();

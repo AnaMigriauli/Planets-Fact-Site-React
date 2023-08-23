@@ -4,9 +4,9 @@ import venusSurf from "../assets/images/venus-3.svg";
 import classes from "../planets/Venus.module.css";
 import Planet from "../reusable/Planet";
 import { useParams } from "react-router-dom";
-import PlanetContext from "../planetContext/PlanetContext";
+import PlanetContext from "../context/PlanetDataContext";
 import { useContext } from "react";
-import { NavigationContext } from "../planetContext/NavigationContext";
+import { NavigationContext } from "../context/NavigationContext";
 
 export function Venus() {
   const { PlanetId } = useParams();

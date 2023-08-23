@@ -1,7 +1,7 @@
 .mercury {
   width: 111px;
   height: 111px;
-  margin-top: 95px;
+  margin: 95px 0 98px 0;
 }
 
 .internal-structure {
@@ -21,10 +21,21 @@
   .mercury {
     width: 184px;
     height: 184px;
-    margin-top: 146px;
+    margin: 146px 0 130px 0;
   }
   .internal-structure {
     width: 182px;
     height: 182px;
+  }
+}
+@media (min-width: 1440px) {
+  .mercury {
+    width: 290px;
+    height: 290px;
+    margin: 0;
+  }
+  .internal-structure {
+    width: 290px;
+    height: 290px;
   }
 }

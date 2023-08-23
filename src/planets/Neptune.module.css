@@ -1,7 +1,7 @@
 .neptune {
   width: 173px;
   height: 173px;
-  margin-top: 64px;
+  margin: 64px 0 67px 0;
 }
 .internal-structure {
   width: 171px;
@@ -21,7 +21,7 @@
   .neptune {
     width: 285px;
     height: 285px;
-    margin-top: 96px;
+    margin: 96px 0 79px 0;
   }
   .internal-structure {
     width: 285px;

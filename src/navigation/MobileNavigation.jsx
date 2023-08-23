@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import PlanetContext from "../planetContext/PlanetContext";
+import PlanetContext from "../context/PlanetDataContext";
 import { NavLink } from "react-router-dom";
 import classes from "./MobileNavigation.module.css";
 import arrow from "../assets/images/Path 3.svg";

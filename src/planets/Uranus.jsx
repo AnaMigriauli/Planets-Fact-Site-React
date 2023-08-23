@@ -5,8 +5,8 @@ import classes from "../planets/Uranus.module.css";
 import Planet from "../reusable/Planet";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { NavigationContext } from "../planetContext/NavigationContext";
-import PlanetContext from "../planetContext/PlanetContext";
+import { NavigationContext } from "../context/NavigationContext";
+import PlanetContext from "../context/PlanetDataContext";
 
 export function Uranus() {
   const { PlanetId } = useParams();

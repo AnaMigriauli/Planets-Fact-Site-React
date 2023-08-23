@@ -1,7 +1,7 @@
 .mars {
   width: 129px;
   height: 129px;
-  margin-top: 87px;
+  margin: 87px 0 88px 0;
 }
 .internal-structure {
   width: 129px;
@@ -21,7 +21,7 @@
   .mars {
     width: 213px;
     height: 213px;
-    margin-top: 132px;
+    margin: 132px 0 115px 0;
   }
   .internal-structure {
     width: 213px;

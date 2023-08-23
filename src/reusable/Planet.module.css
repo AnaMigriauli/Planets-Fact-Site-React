@@ -1,18 +1,14 @@
 .main {
-  padding: 0 24px 47px 24px;
+  margin: 0 24px 47px 28px;
   z-index: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.mercury {
-  width: 111px;
-  height: 111px;
-  margin-top: 95px;
-}
-.mercury-overview {
-  margin-top: 98px;
+
+.planet-overview {
+  width: 100%;
   color: var(--white);
   font-weight: 400;
   letter-spacing: 0px;
@@ -23,20 +19,23 @@
   justify-content: space-between;
   align-items: center;
   gap: 69px;
-  margin-top: 130px;
+  /* margin-top: 130px; */
 }
-.mercury-overview h4 {
+.planet-overview h4 {
   font-family: "Antonio", sans-serif;
   font-size: 40px;
   line-height: 52px;
   text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.mercury-overview p {
+.overview-text {
   font-family: "League Spartan", sans-serif;
   font-size: 11px;
   line-height: 22px;
   margin-top: 16px;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
   text-align: center;
 }
 
@@ -47,6 +46,11 @@
   line-height: 25px;
   letter-spacing: 0px;
   color: var(--white-smoke);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 32px;
 }
 .wikipedia a {
   font-family: "League Spartan", sans-serif;
@@ -54,25 +58,25 @@
   font-weight: 700;
   line-height: 25px;
   text-decoration-line: underline;
-  color: var(--white-smoke);
-  margin: 0 4px;
+  color: var(--white-smoke-light);
 }
-.mercury-parameters {
+.planet-parameters {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 100%;
-  margin-top: 28px;
+  /* width: 100%; */
+  margin: 0 24px 47px 24px;
 }
 
-.mercury-parameters div {
+.planet-parameters div {
+  width: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid var(--white-smoke);
   padding: 9px 24px 13px 24px;
 }
-.mercury-parameters p {
+.planet-parameters p {
   font-family: "League Spartan", sans-serif;
   font-size: 8px;
   font-weight: 700;
@@ -81,7 +85,7 @@
   color: var(--white-smoke-light);
 }
 
-.mercury-parameters span {
+.planet-parameters span {
   font-family: "Antonio", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -97,40 +101,88 @@
   .main {
     padding: 0 40px 36px 39px;
   }
-  .mercury-overview {
+  .planet-overview {
     margin-top: 0;
   }
-  .mercury-overview h4 {
+  .planet-overview h4 {
     font-size: 48px;
   }
-  .mercury-parameters {
+  .planet-parameters {
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 40px 36px 39px;
   }
-  .mercury-parameters div {
+  .planet-parameters div {
     flex-direction: column;
     align-items: start;
-    width: 21.35%;
+    width: 20%;
+    height: 88px;
+    gap: 6px;
+    padding: 16px 0 19px 15px;
   }
-  .mercury-parameters span {
+  .planet-parameters span {
     margin-top: 6px;
     font-size: 24px;
   }
-  .mercury-overview {
-    margin-top: 98px;
+  .planet-overview {
+    /* margin-top: 98px; */
     color: var(--white);
     font-weight: 400;
     letter-spacing: 0px;
     text-align: center;
   }
 
-  .mercury-overview {
+  .planet-overview {
     text-align: start;
   }
-  .mercury-overview h4 {
+  .planet-overview h4 {
     text-align: start;
   }
-  .mercury-overview p {
+  .overview-text {
     text-align: start;
+    margin-top: 24px;
+  }
+  .wikipedia {
+    height: 25px;
+  }
+}
+@media (min-width: 1440px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 126px 165px 87px 335px;
+  }
+  .overview-container {
+    width: 34.4%;
+    flex-direction: column;
+    margin: 0;
+    gap: 0;
+  }
+  .planet-overview {
+    margin: 0;
+  }
+  .planet-overview h4 {
+    margin-bottom: 23px;
+    font-size: 80px;
+  }
+  .overview-text {
+    font-size: 14px;
+  }
+  .wikipedia {
+    gap: 8;
+    font-size: 14px !important;
+    margin: 24px 0 39px 0;
+  }
+  .planet-parameters {
+    margin: 0 165px 56px 165px;
+  }
+  .planet-parameters div {
+    width: 255px;
+    height: 128px;
+    font-size: 40px;
+    letter-spacing: -1.5px;
+    padding: 20px 0 27px 23px;
   }
 }

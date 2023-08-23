@@ -23,6 +23,39 @@
   font-weight: 700;
   line-height: 25px;
   letter-spacing: 1px;
-  color: var(--white);
+  color: var(--white-smoke-00);
   text-transform: uppercase;
+}
+
+.planets-active {
+  color: var(--white);
+  text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1440px) {
+  .tablet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 41px 27px 32px;
+  }
+  .title {
+    margin: 0;
+    padding-top: 29px;
+  }
+  .tablet-navigation {
+    margin: 0;
+  }
+  .tablet-navigation {
+    gap: 33px;
+  }
+  .list-item {
+    padding-top: 29px;
+  }
 }

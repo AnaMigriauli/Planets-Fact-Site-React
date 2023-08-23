@@ -16,6 +16,3 @@ export function NavigationProvider({ children }) {
     </NavigationContext.Provider>
   );
 }
-// export function useNavigationContext() {
-//   return useContext(NavigationContext);
-// }

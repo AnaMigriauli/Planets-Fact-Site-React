@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavigationContext } from "../planetContext/NavigationContext";
+import { NavigationContext } from "../context/NavigationContext";
 
 function Navigation({
   navigation,
@@ -10,6 +10,10 @@ function Navigation({
   structure,
   surface,
   background,
+  numberOne,
+  numberTwo,
+  numberthree,
+  number,
 }) {
   const { active, setActive } = useContext(NavigationContext);
 
@@ -37,6 +41,7 @@ function Navigation({
                 handleTabClick("overview");
               }}
             >
+              <span className={number}>{numberOne}</span>
               {overview}
             </button>
           </li>
@@ -56,6 +61,7 @@ function Navigation({
                 handleTabClick("structure");
               }}
             >
+              <span className={number}>{numberTwo}</span>
               {structure}
             </button>
           </li>
@@ -75,6 +81,7 @@ function Navigation({
                 handleTabClick("surface");
               }}
             >
+              <span className={number}>{numberthree}</span>
               {surface}
             </button>
           </li>

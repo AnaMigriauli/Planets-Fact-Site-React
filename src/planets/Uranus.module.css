@@ -1,7 +1,7 @@
 .uranus {
   width: 176px;
   height: 176px;
-  margin-top: 63px;
+  margin: 63px 0 65px 0;
 }
 .internal-structure {
   width: 176px;
@@ -21,7 +21,7 @@
   .uranus {
     width: 290px;
     height: 290px;
-    margin-top: 93px;
+    margin: 93px 0 77px 0;
   }
   .internal-structure {
     width: 290px;

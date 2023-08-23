@@ -1,7 +1,7 @@
 .saturn {
   width: 256px;
   height: 256px;
-  margin-top: 24px;
+  margin: 44.11px 0 24px 0;
 }
 .internal-structure {
   width: 155px;
@@ -21,7 +21,7 @@
   .saturn {
     width: 422px;
     height: 422px;
-    margin-top: 27px;
+    margin: 60.15px 0 11px 0;
   }
   .internal-structure {
     width: 422px;

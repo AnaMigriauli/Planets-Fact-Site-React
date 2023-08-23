@@ -1,7 +1,7 @@
 import classes from "./MobileBtn.module.css";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import PlanetContext from "../planetContext/PlanetContext";
+import PlanetContext from "../context/PlanetDataContext";
 import Navigation from "../reusable/Navigation";
 
 function MobileBtn() {
