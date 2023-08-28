@@ -5,14 +5,14 @@ import PlanetContext from "./context/PlanetDataContext";
 import { NavigationProvider } from "./context/NavigationContext";
 import { PlanetsPath } from "./planets/PlanetsPath";
 import { PLANETS_DATA } from "./planetsData";
-import { Mercury } from "./planets/Mercury";
+import HomePage from "./planets/HomePage";
 
 const router = createBrowserRouter([
   {
-    path: "/Planets-Fact-Site-React",
+    path: "/",
     element: <RootPage />,
     children: [
-      { path: "", element: <Mercury /> },
+      { path: "", element: <HomePage /> },
       { path: ":PlanetId", element: <PlanetsPath /> },
     ],
   },

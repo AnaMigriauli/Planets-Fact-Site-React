@@ -16,6 +16,8 @@ function MainNavigation() {
   const CloseMenuHandler = () => {
     setIsMenuClicked(false);
   };
+
+  menu.map((id) => console.log(id.id));
   return (
     <>
       {window.innerWidth > 768 ? (

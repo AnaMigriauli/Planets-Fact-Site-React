@@ -44,5 +44,7 @@
 }
 
 body {
-  background: repeat-y url("./assets/images/backgroundStars.svg") center / cover;
+  background-color: var(--dark-blue);
+  width: 100%;
+  background-image: url("./assets/images/backgroundStars.svg");
 }

@@ -1,6 +1,6 @@
 .navigation {
   width: 100%;
-  background: var(--dark-blue);
+  /* background: var(--dark-blue); */
   border-bottom: 1px solid var(--white-smoke);
 }
 .nav-list {

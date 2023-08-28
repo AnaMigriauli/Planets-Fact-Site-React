@@ -13,6 +13,8 @@ export function Jupiter() {
   const menu = useContext(PlanetContext);
   const planet = menu.find((planet) => planet.id === PlanetId);
   const { active } = useContext(NavigationContext);
+
+  // console.log(planet);
   let classname, className, src, overview, wikipedia;
   if (active === "overview") {
     classname = classes.jupiter;

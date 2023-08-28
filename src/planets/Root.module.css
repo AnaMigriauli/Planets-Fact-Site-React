@@ -1,4 +1,5 @@
 main {
-  background: var(--dark-blue);
+  /* background-color: var(--dark-blue); */
   width: 100%;
+  /* background-image: url("../assets/images/backgroundStars.svg"); */
 }
