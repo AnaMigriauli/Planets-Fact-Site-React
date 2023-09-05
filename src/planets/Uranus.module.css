@@ -7,15 +7,16 @@
   width: 176px;
   height: 176px;
   position: absolute;
-  top: 68px;
-  right: 69px;
+  bottom: 22%;
+  left: 25%;
 }
 
 .surface {
   position: absolute;
   width: 65px;
   height: auto;
-  top: 182px;
+  bottom: 14%;
+  left: 32%;
 }
 @media (min-width: 768px) {
   .uranus {
@@ -26,5 +27,13 @@
   .internal-structure {
     width: 290px;
     height: 290px;
+    bottom: 17.4%;
+    left: 24%;
+  }
+  .surface {
+    width: 163px;
+    height: 199px;
+    bottom: -5%;
+    left: 23%;
   }
 }

@@ -8,14 +8,15 @@
   width: 111px;
   height: 111px;
   position: absolute;
-  top: 95px;
-  right: 104px;
+  top: 31%;
+  right: -25%;
 }
 .surface {
   position: absolute;
   width: 50px;
   height: auto;
-  top: 184px;
+  top: 59%;
+  left: 28%;
 }
 @media (min-width: 768px) {
   .mercury {
@@ -26,6 +27,11 @@
   .internal-structure {
     width: 182px;
     height: 182px;
+    top: 32%;
+  }
+  .surface {
+    top: 62%;
+    left: 37%;
   }
 }
 @media (min-width: 1440px) {
@@ -37,5 +43,12 @@
   .internal-structure {
     width: 290px;
     height: 290px;
+    top: 0;
+  }
+  .surface {
+    width: 158px;
+    height: 165px;
+    top: 77%;
+    left: 23%;
   }
 }

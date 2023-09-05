@@ -7,15 +7,16 @@
   width: 129px;
   height: 129px;
   position: absolute;
-  top: 66px;
-  right: 59px;
+  top: 28%;
+  right: -24%;
 }
 
 .surface {
   position: absolute;
   width: 70px;
   height: auto;
-  top: 196px;
+  bottom: 13%;
+  left: 23%;
 }
 @media (min-width: 768px) {
   .mars {
@@ -26,5 +27,9 @@
   .internal-structure {
     width: 213px;
     height: 213px;
+  }
+  .surface {
+    bottom: 19%;
+    left: 34%;
   }
 }

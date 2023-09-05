@@ -1,22 +1,22 @@
 .earth {
   width: 173px;
   height: 173px;
-
   margin: 64px 0 67px 0;
 }
 .internal-structure {
-  width: 170px;
-  height: 170px;
+  width: 173px;
+  height: 173px;
   position: absolute;
-  top: 66px;
-  right: 59px;
+  top: 21%;
+  right: -24%;
 }
 
 .surface {
   position: absolute;
   width: 50px;
   height: auto;
-  top: 184px;
+  bottom: 21%;
+  left: 35%;
 }
 @media (min-width: 768px) {
   .earth {
@@ -28,6 +28,12 @@
     width: 285px;
     height: 285px;
   }
+  .surface {
+    width: 163px;
+    height: 199px;
+    bottom: -5%;
+    left: 21%;
+  }
 }
 @media (min-width: 1440px) {
   .earth {
@@ -37,5 +43,10 @@
   .internal-structure {
     width: 450px;
     height: 450px;
+    top: 15.2%;
+  }
+  .surface {
+    bottom: 5%;
+    left: 32%;
   }
 }

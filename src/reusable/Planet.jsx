@@ -1,6 +1,7 @@
 import classes from "./Planet.module.css";
 import MobileBtn from "../navigation/MobileBtn";
 import TabletBtn from "../navigation/TabletBtn";
+import { Link } from "react-router-dom";
 
 function Planet({
   name,
@@ -17,8 +18,10 @@ function Planet({
       {window.innerWidth < 768 ? <MobileBtn /> : ""}
       <div className={classes["planet-page"]}>
         <div className={classes.main}>
-          <img className={classname} src={imgSrc} alt={name} />
-          <img src={src} className={className} />
+          <div className={classes["img-container"]}>
+            <img className={classname} src={imgSrc} alt={name} />
+            <img src={src} className={className} />
+          </div>
           <div
             className={
               window.innerWidth > 768 ? classes["overview-container"] : ""
@@ -29,9 +32,9 @@ function Planet({
               <p className={classes["overview-text"]}>{overview}</p>
               <p className={classes.wikipedia}>
                 Source :
-                <a href={wikipedia} target="_blank" rel="noopener noreferrer">
+                <Link to={wikipedia} target="_blank" rel="noopener noreferrer">
                   Wikipedia
-                </a>
+                </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="12"

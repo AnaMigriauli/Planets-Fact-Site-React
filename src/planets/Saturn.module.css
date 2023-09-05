@@ -7,15 +7,16 @@
   width: 155px;
   height: 155px;
   position: absolute;
-  top: 68px;
-  right: 69px;
+  top: 26.5%;
+  right: 4%;
 }
 
 .surface {
   position: absolute;
   width: 65px;
   height: auto;
-  top: 176px;
+  bottom: 16%;
+  left: 37%;
 }
 @media (min-width: 768px) {
   .saturn {
@@ -24,7 +25,13 @@
     margin: 60.15px 0 11px 0;
   }
   .internal-structure {
-    width: 422px;
-    height: 422px;
+    width: 260px;
+    height: 260px;
+  }
+  .surface {
+    width: 163px;
+    height: 163px;
+    bottom: 4%;
+    left: 31%;
   }
 }

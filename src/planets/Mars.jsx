@@ -1,7 +1,7 @@
 import mars from "../assets/images/mars-1.svg";
 import marsStr from "../assets/images/mars-2.svg";
 import marsSurf from "../assets/images/mars-3.svg";
-import classes from "../planets/mars.module.css";
+import classes from "../planets/Mars.module.css";
 import Planet from "../reusable/Planet";
 import { useParams } from "react-router-dom";
 import PlanetContext from "../context/PlanetDataContext";
