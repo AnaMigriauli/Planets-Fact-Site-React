@@ -11,6 +11,10 @@
   text-align: center;
   margin-top: 32px;
 }
+.site-title {
+  text-decoration: none;
+  color: var(--white);
+}
 .tablet-navigation {
   display: flex;
   justify-content: space-between;

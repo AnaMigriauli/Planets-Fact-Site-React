@@ -15,21 +15,24 @@ export function PlanetsPath() {
   const menu = useContext(PlanetContext);
   const planet = menu.find((planet) => planet.id === PlanetId);
 
-  if (planet.id === "mercury") {
-    return <Mercury />;
-  } else if (planet.id === "venus") {
-    return <Venus />;
-  } else if (planet.id === "earth") {
-    return <Earth />;
-  } else if (planet.id === "mars") {
-    return <Mars />;
-  } else if (planet.id === "jupiter") {
-    return <Jupiter />;
-  } else if (planet.id === "saturn") {
-    return <Saturn />;
-  } else if (planet.id === "uranus") {
-    return <Uranus />;
-  } else if (planet.id === "neptune") {
-    return <Neptune />;
+  switch (planet.id) {
+    case "mercury":
+      return <Mercury />;
+    case "venus":
+      return <Venus />;
+    case "earth":
+      return <Earth />;
+    case "mars":
+      return <Mars />;
+    case "jupiter":
+      return <Jupiter />;
+    case "saturn":
+      return <Saturn />;
+    case "uranus":
+      return <Uranus />;
+    case "neptune":
+      return <Neptune />;
+    default:
+      return null;
   }
 }

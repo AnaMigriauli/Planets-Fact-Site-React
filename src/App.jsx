@@ -9,7 +9,7 @@ import HomePage from "./planets/HomePage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "Planets-Fact-Site",
     element: <RootPage />,
     children: [
       { path: "", element: <HomePage /> },
