@@ -1,3 +1,7 @@
+import { NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import PlanetContext from "../context/PlanetDataContext";
 import earth from "../assets/images/earth-1.svg";
 import jupiter from "../assets/images/jupiter-1.svg";
 import mars from "../assets/images/mars-1.svg";
@@ -9,32 +13,56 @@ import venus from "../assets/images/venus-1.svg";
 import classes from "./HomePage.module.css";
 
 const HomePage = () => {
+  // const { PlanetId } = useParams();
+
+  // const menu = useContext(PlanetContext);
+  // const planet = menu.find((planet) => planet.id === PlanetId);
+  // console.log(menu);
   return (
     <div className={classes["main-page"]}>
-      <div className={classes["orbit-08"]}>
-        <div className={classes["orbit-07"]}>
-          <div className={classes["orbit-06"]}>
-            <div className={classes["orbit-05"]}>
-              <div className={classes["orbit-04"]}>
-                <div className={classes["orbit-03"]}>
-                  <div className={classes["orbit-02"]}>
-                    <img className={classes.venus} src={venus} />
-                    <div className={classes["orbit-01"]}>
-                      <img className={classes.mercury} src={mercury} />
+      <NavLink to={"neptune"}>
+        <div className={classes["orbit-08"]}>
+          <NavLink to={"uranus"}>
+            <div className={classes["orbit-07"]}>
+              <NavLink to={"saturn"}>
+                <div className={classes["orbit-06"]}>
+                  <NavLink to={"jupiter"}>
+                    <div className={classes["orbit-05"]}>
+                      <NavLink to={"mars"}>
+                        <div className={classes["orbit-04"]}>
+                          <NavLink to={"earth"}>
+                            <div className={classes["orbit-03"]}>
+                              <NavLink to={"venus"}>
+                                <div className={classes["orbit-02"]}>
+                                  <NavLink to={"mercury"}>
+                                    <div className={classes["orbit-01"]}>
+                                      <img
+                                        className={classes.mercury}
+                                        src={mercury}
+                                      />
+                                    </div>
+                                  </NavLink>
+                                  <img className={classes.venus} src={venus} />
+                                </div>
+                              </NavLink>
+                              <img className={classes.earth} src={earth} />
+                            </div>
+                          </NavLink>
+                          <img className={classes.mars} src={mars} />
+                        </div>
+                      </NavLink>
+                      <img className={classes.jupiter} src={jupiter} />
                     </div>
-                  </div>
-                  <img className={classes.earth} src={earth} />
+                  </NavLink>
+                  <img className={classes.saturn} src={saturn} />
                 </div>
-                <img className={classes.mars} src={mars} />
-              </div>
-              <img className={classes.jupiter} src={jupiter} />
+              </NavLink>
+              <img className={classes.uranus} src={uranus} />
             </div>
-            <img className={classes.saturn} src={saturn} />
-          </div>
-          <img className={classes.uranus} src={uranus} />
+          </NavLink>
+          <img className={classes.neptune} src={neptune} />
         </div>
-        <img className={classes.neptune} src={neptune} />
-      </div>
+      </NavLink>
     </div>
   );
 };
