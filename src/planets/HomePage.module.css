@@ -12,6 +12,30 @@
   border-radius: 50%;
   animation: rotateOrbit 10s infinite linear;
 }
+.orbit-01:hover {
+  border: 1px solid var(--blue-moon);
+}
+.orbit-02:hover {
+  border: 1px solid var(--venus-border);
+}
+.orbit-03:hover {
+  border: 1px solid var(--earth-border);
+}
+.orbit-04:hover {
+  border: 1px solid var(--mars-border);
+}
+.orbit-05:hover {
+  border: 1px solid var(--jupiter-border);
+}
+.orbit-06:hover {
+  border: 1px solid var(--saturn-border);
+}
+.orbit-07:hover {
+  border: 1px solid var(--uranus-border);
+}
+.orbit-08:hover {
+  border: 1px solid var(--neptune-border);
+}
 .mercury {
   width: 10px;
   height: 10px;

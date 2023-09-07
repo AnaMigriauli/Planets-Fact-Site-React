@@ -13,11 +13,6 @@ import venus from "../assets/images/venus-1.svg";
 import classes from "./HomePage.module.css";
 
 const HomePage = () => {
-  // const { PlanetId } = useParams();
-
-  // const menu = useContext(PlanetContext);
-  // const planet = menu.find((planet) => planet.id === PlanetId);
-  // console.log(menu);
   return (
     <div className={classes["main-page"]}>
       <NavLink to={"neptune"}>
